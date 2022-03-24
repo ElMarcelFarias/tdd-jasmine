@@ -82,3 +82,31 @@ describe("Suíte de testes do toBeNull", function(){
         expect(objeto).not.toEqual(texto);
     });
 });
+
+describe("Suíte de testes do toBeTruthy", function(){
+    var objeto = { 'valor': 123}
+    var texto;
+    var numero = 10;
+
+    it("deve validar o uso do matcher 'toBeTruthy'", function(){
+        expect(objeto).toBeTruthy();
+        expect(numero).toBeTruthy();
+        expect(texto).not.toBeTruthy();
+    });
+});
+
+describe("Suíte de testes do toBeFalsy", function(){
+
+    var numero = 10;
+
+    it("deve validar o uso do matcher 'toBeFalsy'", function(){
+        expect(false).toBeFalsy();
+        expect("").toBeFalsy();
+        expect(0).toBeFalsy();
+        expect(undefined).toBeFalsy();
+        expect(null).toBeFalsy();
+        expect(NaN).toBeFalsy();
+        expect(numero).not.toBeFalsy();
+        expect("false").not.toBeFalsy();
+    });
+});
