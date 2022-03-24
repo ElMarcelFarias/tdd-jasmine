@@ -56,3 +56,29 @@ describe("Suíte de testes do toBeDefined", function(){
         expect(obj.mensagem).not.toBeDefined();
     });
 });
+
+describe("Suíte de testes do toBeUnDefined", function(){
+    var numero = 10;
+    var texto;
+    var obj = { 'valor': 10};
+
+    it("deve validar o uso do matcher 'toBeUnDefined'", function(){
+        expect(numero).not.toBeUnDefined();
+        expect(texto).toBeUnDefined();
+        expect(obj.valor).not.toBeUnDefined();
+        expect(obj.mensagem).toBeUnDefined();
+    });
+});
+
+describe("Suíte de testes do toBeNull", function(){
+    var objeto = null
+    var texto;
+    var numero = 10;
+
+    it("deve validar o uso do matcher 'toBeNull'", function(){
+        expect(objeto).toBeNull();
+        expect(numero).not.toBeNull();
+        expect(texto).not.toBeNull();
+        expect(objeto).not.toEqual(texto);
+    });
+});
