@@ -111,4 +111,25 @@ describe("Suíte de testes do toBeFalsy", function(){
     });
 });
 
-//teste commit 
+describe("Suíte de testes do toContain", function() {
+    var nomes = ["Fulano", "Ciclano", "Beltrano"];
+    var nomesTexto = "Fulano Ciclano Beltrano";
+    it("deve validar o uso do matcher 'toContain'", function(){
+        expect(nomes).toContain("Ciclano");
+        expect(nomesTexto).toContain("Fulano");
+        expect(nomesTexto).toContain("Bel");
+        expect(nomes).not.toContain("Maria");
+        expect(nomes).not.toContain("ciclano");
+    });
+});
+
+describe("Suíte de testes do toBeLessThan", function() {
+    const PI = 3.1415;
+    var numero = 2;
+    it("deve validar o uso do matcher 'toBeLessThan", function() {
+        expect(numero).toBeLessThan(PI);
+        expect("1.2").toBeLessThan(PI);
+        expect(5).not.toBeLessThan(PI);
+        expect(PI).not.toBeLessThan(PI);
+    });
+});
