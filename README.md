@@ -15,6 +15,11 @@ Repositório de testes automatizados com Jasmine Framework
   <li>Jasmine</li>
 </ul>
 
+<h3>Comandos para inicializar os testes</h3>
+<p><i>npm install jasmine -g</i></p>
+<p><i>npm install nodemon -g</i></p>
+<p><i>nodemon --exec jasmine (dentro da pasta)</i></p>
+
 
 <h2>screen</h2>
 
