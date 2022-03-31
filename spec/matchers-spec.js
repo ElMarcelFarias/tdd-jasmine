@@ -174,3 +174,29 @@ describe("Suíte de testes do tópico 5.13", function() {
         expect(calcularDobro).not.toThrowError();
     });
 });
+
+describe("Testa a função 'fail' de falha manual", function() {
+    var operacao = function(deveExecutar, callBack) {
+        if(deveExecutar) {
+            callBack();
+        }
+    };
+    it("Não deve executar a função de callback", function() {
+        operacao(false, function() {
+            fail("Função de callback foi executada");
+        });
+    });
+});
+
+describe("Suíte de testes do beforeEach", function() {
+    var contador = 0;
+    beforeEach(function() {
+        contador ++;
+    });
+    it("deve exibir o contador com valor 1", function() {
+        expect(contador).toEqual(1);
+    })
+    it("deve exibir o contador com valor 2", function() {
+        expect(contador).toEqual(2);
+    });
+});
